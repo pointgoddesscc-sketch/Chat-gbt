@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "PhotoCode Capture",
+  "version": "1.0.0",
+  "description": "Capture the current tab and send it to your PhotoCode website.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PhotoCode Capture"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoCode Chat</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="panel auth">
+      <h1>PhotoCode Chat</h1>
+      <p>Verified email chat + photo-to-code converter.</p>
+
+      <input id="email" type="email" placeholder="Email" autocomplete="email" />
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+
+      <button id="signup" type="button">Create Account</button>
+      <button id="login" type="button">Login</button>
+      <button id="verify" type="button">Send Verification Email</button>
+      <button id="logout" type="button">Logout</button>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel converter">
+      <h2>Turn Photo Into Code</h2>
+      <input id="photo" type="file" accept="image/*" />
+      <p id="capturedNotice" class="notice" hidden>Captured tab image loaded from the extension.</p>
+      <button id="convert" type="button">Convert</button>
+      <pre id="codeOutput"></pre>
+    </section>
+
+    <section class="panel chat">
+      <h2>Live Texting</h2>
+      <div id="messages"></div>
+      <form id="chatForm">
+        <input id="messageInput" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
