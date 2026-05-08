@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(circle at top left, #6947ff 0, transparent 35%),
+    linear-gradient(135deg, #080914, #12142d);
+  min-height: 100vh;
+}
+
+.app {
+  width: min(1200px, 94%);
+  margin: auto;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 28px;
+  padding: 26px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(16px);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+input,
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 800;
+  color: #080914;
+  background: #72f6ff;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.notice {
+  color: #cdd2ff;
+  margin: 4px 0 8px;
+}
+
+#messages {
+  height: 390px;
+  overflow: auto;
+  background: rgba(0, 0, 0, .25);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.msg {
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .12);
+  overflow-wrap: anywhere;
+}
+
+.msg strong {
+  color: #72f6ff;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: #050612;
+  border-radius: 18px;
+  padding: 16px;
+  min-height: 280px;
+  overflow: auto;
+}
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
